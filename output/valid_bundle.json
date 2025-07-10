@@ -1,0 +1,144 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "58119c6b-39ae-4ddd-885e-02831b3df167",
+        "name": [
+          {
+            "given": [
+              "John"
+            ],
+            "family": "Doe"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1980-01-01"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "73d30e33-0faf-4bdf-98a1-dd6b67d013a4",
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "code": "plan"
+            }
+          ]
+        },
+        "beneficiary": {
+          "reference": "Patient/58119c6b-39ae-4ddd-885e-02831b3df167"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Coverage"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ExplanationOfBenefit",
+        "id": "3962356a-aa2d-4337-90ae-9cf128e758be",
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "code": "professional"
+            }
+          ]
+        },
+        "patient": {
+          "reference": "Patient/58119c6b-39ae-4ddd-885e-02831b3df167"
+        },
+        "insurance": [
+          {
+            "coverage": {
+              "reference": "Coverage/73d30e33-0faf-4bdf-98a1-dd6b67d013a4"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "ExplanationOfBenefit"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "ae728741-0c2a-4662-978b-868471edf3e8",
+        "name": [
+          {
+            "given": [
+              "Jane"
+            ],
+            "family": "Smith"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1975-03-22"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "85322f5f-2f98-43b1-857e-1b92c12b0154",
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "code": "group"
+            }
+          ]
+        },
+        "beneficiary": {
+          "reference": "Patient/ae728741-0c2a-4662-978b-868471edf3e8"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Coverage"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ExplanationOfBenefit",
+        "id": "df131ad2-7f71-4c1a-bcfc-d1fff8a34d79",
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "code": "pharmacy"
+            }
+          ]
+        },
+        "patient": {
+          "reference": "Patient/ae728741-0c2a-4662-978b-868471edf3e8"
+        },
+        "insurance": [
+          {
+            "coverage": {
+              "reference": "Coverage/85322f5f-2f98-43b1-857e-1b92c12b0154"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "ExplanationOfBenefit"
+      }
+    }
+  ]
+}

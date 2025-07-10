@@ -1,0 +1,85 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1d5545b4-d7eb-43c8-a3a3-6b84dfa3d3b3",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "name": [
+          {
+            "family": "Smith",
+            "given": [
+              "Alice"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1985-05-05"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "95a1460d-6c34-4519-b610-e4b51dd3ffa2",
+        "status": "active",
+        "kind": "insurance",
+        "type": {
+          "coding": [
+            {
+              "code": "plan"
+            }
+          ]
+        },
+        "beneficiary": {
+          "reference": "Patient/1d5545b4-d7eb-43c8-a3a3-6b84dfa3d3b3"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Coverage"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ExplanationOfBenefit",
+        "id": "1b18da7d-24b5-42dc-b4b9-191cad53d2d3",
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "code": "professional"
+            }
+          ]
+        },
+        "use": "claim",
+        "patient": {
+          "reference": "Patient/1d5545b4-d7eb-43c8-a3a3-6b84dfa3d3b3"
+        },
+        "created": "2025-07-10T00:00:00",
+        "outcome": "completed",
+        "insurance": [
+          {
+            "focal": true,
+            "coverage": {
+              "reference": "Coverage/95a1460d-6c34-4519-b610-e4b51dd3ffa2"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "ExplanationOfBenefit"
+      }
+    }
+  ]
+}

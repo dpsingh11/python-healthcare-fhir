@@ -1,0 +1,4 @@
+first_name,last_name,gender,birthDate,eob_status,eob_type,coverage_type
+John,Doe,male,1980-01-01,active,professional,plan
+Jane,Smith,female,1975-03-22,active,pharmacy,group
+Arjun,,male,,active,professional,plan

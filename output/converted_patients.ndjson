@@ -1,0 +1,5 @@
+{"resourceType": "Patient", "id": "1", "name": [{"given": ["Clark"], "family": "Kent"}], "gender": "male", "birthDate": "1980-01-01"}
+{"resourceType": "Patient", "id": "2", "name": [{"given": ["Diana"], "family": "Prince"}], "gender": "female", "birthDate": "1975-03-22"}
+{"resourceType": "Patient", "id": "3", "name": [{"given": ["Bruce"], "family": "Wayne"}], "gender": "male", "birthDate": "1992-06-15"}
+{"resourceType": "Patient", "id": "4", "name": [{"given": ["Barry"], "family": "Allen"}], "gender": "male", "birthDate": "1992-06-15"}
+{"resourceType": "Patient", "id": "5", "name": [{"given": ["Petter"], "family": "Parker"}], "gender": "male", "birthDate": "1995-04-01"}

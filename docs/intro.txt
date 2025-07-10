@@ -1,0 +1,27 @@
+📦 What is fhir.resources?
+A Python library that maps FHIR R4 resources to Pydantic models — helps with creating, validating, and manipulating FHIR resources in a strongly typed way.
+#https://pypi.org/project/fhir.resources/
+
+📌 Install:
+
+pip install fhir.resources
+
+🧠 Key Concepts You'll Cover
+
+Topic	Description
+✅ Resource instantiation	Create Patient, Coverage, EOB using model classes
+✅ Field-level validation	Auto-validates structure, types, required fields
+✅ Serialization	Convert to and from JSON cleanly
+✅ Resource linking via Reference	Link Patient to Coverage or EOB
+✅ Bundle creation	Build Bundle with multiple entries programmatically
+
+🧩 Module Plan
+Let’s build the following scripts step-by-step:
+
+create_patient_resource.py – create and print a Patient
+validate_resource_from_json.py – validate a JSON input as Patient
+create_patient_coverage_eob_bundle.py – build a linked resource bundle
+validate_and_post_using_fhir_resources.py – validate using fhir.resources and send to FHIR server
+
+
+BONUS: parse_fhir_response.py – parse server response into objects

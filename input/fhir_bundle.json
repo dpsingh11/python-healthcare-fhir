@@ -1,0 +1,53 @@
+{
+    "resourceType": "Bundle",
+    "type": "collection",
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "Patient",
+                "id": "1",
+                "name": [
+                    {
+                        "given": [
+                            "John"
+                        ],
+                        "family": "Doe"
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1980-01-01"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Patient",
+                "id": "2",
+                "name": [
+                    {
+                        "given": [
+                            "Jane"
+                        ],
+                        "family": "Smith"
+                    }
+                ],
+                "birthDate": "1975-03-22"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Patient",
+                "id": "3",
+                "name": [
+                    {
+                        "given": [
+                            "Arjun"
+                        ],
+                        "family": "Smith"
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1975-03-22"
+            }
+        }
+    ]
+}
