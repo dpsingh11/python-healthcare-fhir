@@ -3,6 +3,9 @@ from fhir.resources.patient import Patient
 from fhir.resources.humanname import HumanName
 
 from fhir.resources.meta import Meta
+import os
+#  directory if it doesn't exist
+os.makedirs("output", exist_ok=True)
 
 
 # Step 1: Create a HumanName object for the patient
@@ -24,7 +27,7 @@ patient.id = "12345"
 
 patient.name = [name]  # FHIR allows multiple names
 patient.gender = "male"
-patient.birthDate = "1980-01-32"
+patient.birthDate = "1980-01-30"
 
 print(type(patient))
 print(patient)
@@ -38,7 +41,7 @@ print("\n Patient resource as JSON:")
 print(patient_json)
 
 # Optional: Save to file
-with open("output/fhir_patient.json", "w") as f:
+with open("../output/fhir_patient.json", "w") as f:
     f.write(patient_json)
 
 print("\n Patient resource written to output/fhir_patient.json")

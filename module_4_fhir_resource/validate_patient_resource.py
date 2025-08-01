@@ -32,7 +32,7 @@ print(patient.model_dump_json(indent=2))
 
 # Step 5: Write to file
 os.makedirs("output", exist_ok=True)
-with open("output/fhir_patient.json", "w") as f:
+with open("../output/fhir_patient.json", "w") as f:
     f.write(patient.model_dump_json(indent=2))
 
 print("\n Patient resource written to output/fhir_patient.json")

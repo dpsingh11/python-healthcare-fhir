@@ -9,22 +9,30 @@ by mixing static text with dynamic values (placeholders).
 pip install jinja2
 '''
 # Paths
-input_csv = "input/patients.csv"
-template_dir = "templates"
-template_file = "patient_template.txt"
-output_json = "output/patient_transaction_bundle.json"
-os.makedirs("output", exist_ok=True)
+# Base directory (project root assumed to be one level above this script)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+INPUT_CSV = os.path.join(BASE_DIR, "input", "patients.csv")
+TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
+TEMPLATE_FILE = "patient_template.txt"
+OUTPUT_DIR = os.path.join(BASE_DIR, "output")
+OUTPUT_JSON = os.path.join(OUTPUT_DIR, "patient_transaction_bundle.json")
 
-# Jinja2 Environment
-env = Environment(loader=FileSystemLoader(template_dir))
-template = env.get_template(template_file)
+# Create output directory if not exists
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+# ----------- JINJA2 TEMPLATE -------------
+env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
+template = env.get_template(TEMPLATE_FILE)
 
 entries = []
 
 # Read and transform each CSV row
-with open(input_csv, "r") as f:
+with open(INPUT_CSV, "r") as f:
     reader = csv.DictReader(f)
     for row in reader:
+        name_parts = row["name"].strip().split(" ", 1)
+        row["given"] = name_parts[0]
+        row["family"] = name_parts[1] if len(name_parts) > 1 else ""
         resource_str = template.render(**row)
         patient_resource = json.loads(resource_str)
         
@@ -45,7 +53,7 @@ bundle = {
 }
 
 # Write to file
-with open(output_json, "w") as f:
+with open(OUTPUT_JSON, "w") as f:
     json.dump(bundle, f, indent=2)
 
-print(f"Transaction bundle written to: {output_json}")
+print(f"Transaction bundle written to: {OUTPUT_JSON}")
