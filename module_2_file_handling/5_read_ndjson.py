@@ -1,4 +1,5 @@
 import json
+# newline delimeted json
 
 
 def read_ndjson(file_path):

@@ -1,4 +1,5 @@
 import json
+# day2
 
 
 def ndjson_to_bundle(ndjson_path, bundle_path):

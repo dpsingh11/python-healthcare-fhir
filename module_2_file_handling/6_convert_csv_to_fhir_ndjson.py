@@ -1,5 +1,8 @@
 import csv
 import json
+'''
+program to convert the given csv file into fhir ndjson format and writing it. 
+'''
 
 
 def csv_to_fhir_patient(row):
@@ -25,6 +28,7 @@ def convert_and_write_ndjson(csv_path, ndjson_path):
             f_out.write(json.dumps(patient) + '\n')
 
 
+# starting poing
 if __name__ == "__main__":
     convert_and_write_ndjson(
         'input/patients.csv', 'output/converted_patients.ndjson')

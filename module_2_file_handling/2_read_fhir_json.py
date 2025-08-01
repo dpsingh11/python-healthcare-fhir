@@ -6,6 +6,7 @@ def read_fhir_bundle(file_path):
         data = json.load(f)
 
     print("Reading FHIR Bundle...\n")
+    # get() to fall safe provide default value
     for entry in data.get('entry', []):
         resource = entry.get('resource', {})
         if resource.get('resourceType') == 'Patient':

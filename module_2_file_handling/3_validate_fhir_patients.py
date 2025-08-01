@@ -13,9 +13,9 @@ def validate_patients(file_path):
             print(f"Validating Patient ID: {resource.get('id')}")
             for field in REQUIRED_FIELDS:
                 if field not in resource:
-                    print(f"  ❌ Missing field: {field}")
+                    print(f"  Missing field: {field}")
                 else:
-                    print(f"  ✅ {field} found")
+                    print(f"   {field} found")
             print("-" * 30)
 
 

@@ -1,5 +1,12 @@
-{"resourceType": "Patient", "id": "1", "name": [{"given": ["Clark"], "family": "Kent"}], "gender": "male", "birthDate": "1980-01-01"}
-{"resourceType": "Patient", "id": "2", "name": [{"given": ["Diana"], "family": "Prince"}], "gender": "female", "birthDate": "1975-03-22"}
-{"resourceType": "Patient", "id": "3", "name": [{"given": ["Bruce"], "family": "Wayne"}], "gender": "male", "birthDate": "1992-06-15"}
-{"resourceType": "Patient", "id": "4", "name": [{"given": ["Barry"], "family": "Allen"}], "gender": "male", "birthDate": "1992-06-15"}
-{"resourceType": "Patient", "id": "5", "name": [{"given": ["Petter"], "family": "Parker"}], "gender": "male", "birthDate": "1995-04-01"}
+{"resourceType": "Patient", "id": "1", "name": [{"given": ["Bruce"], "family": "Wayne"}], "gender": "male", "birthDate": "1972-02-19"}
+{"resourceType": "Patient", "id": "2", "name": [{"given": ["Clark"], "family": "Kent"}], "gender": "male", "birthDate": "1975-06-18"}
+{"resourceType": "Patient", "id": "3", "name": [{"given": ["Diana"], "family": "Prince"}], "gender": "female", "birthDate": "1984-03-22"}
+{"resourceType": "Patient", "id": "4", "name": [{"given": ["Barry"], "family": "Allen"}], "gender": "male", "birthDate": "1989-07-14"}
+{"resourceType": "Patient", "id": "5", "name": [{"given": ["Harley"], "family": "Quinn"}], "gender": "female", "birthDate": "1990-09-11"}
+{"resourceType": "Patient", "id": "6", "name": [{"given": ["Selina"], "family": "Kyle"}], "gender": "female", "birthDate": "1985-04-10"}
+{"resourceType": "Patient", "id": "7", "name": [{"given": ["Arthur"], "family": "Curry"}], "gender": "male", "birthDate": "1983-01-29"}
+{"resourceType": "Patient", "id": "8", "name": [{"given": ["Victor"], "family": "Stone"}], "gender": "male", "birthDate": "1992-12-21"}
+{"resourceType": "Patient", "id": "9", "name": [{"given": ["Barbara"], "family": "Gordon"}], "gender": "female", "birthDate": "1987-07-17"}
+{"resourceType": "Patient", "id": "10", "name": [{"given": ["Hal"], "family": "Jordan"}], "gender": "male", "birthDate": "1978-04-2011"}
+{"resourceType": "Patient", "id": "11", "name": [{"given": ["Harry"], "family": "Potter"}], "gender": "male", "birthDate": "1998-04-24"}
+{"resourceType": "Patient", "id": "11", "name": [{"given": ["Harry"], "family": "Potter"}], "gender": "male", "birthDate": "1998-04-24"}

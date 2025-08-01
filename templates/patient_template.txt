@@ -1,0 +1,12 @@
+{
+  "resourceType": "Patient",
+  "id": "{{ id }}",
+  "name": [
+    {
+      "given": ["{{ given }}"],
+      "family": "{{ family }}"
+    }
+  ],
+  "gender": "{{ gender }}",
+  "birthDate": "{{ birthDate }}"
+}

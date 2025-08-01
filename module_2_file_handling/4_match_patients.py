@@ -3,6 +3,7 @@ import json
 
 
 def load_csv_ids(file_path):
+    # set is unordered collection of unique items
     ids = set()
     with open(file_path) as f:
         reader = csv.DictReader(f)
@@ -22,11 +23,11 @@ def find_matching_patients(json_path, patient_ids):
             name = resource.get('name', [{}])[0]
             given = name.get('given', [''])[0]
             family = name.get('family', '')
-            print(f"✅ Matched: {given} {family} (ID: {resource.get('id')})")
+            print(f"Matched: {given} {family} (ID: {resource.get('id')})")
 
 
 if __name__ == "__main__":
     patient_ids = load_csv_ids('input/patients.csv')
     find_matching_patients('input/fhir_bundle.json', patient_ids)
 
-# next instead of id match with patiet demographic
+# next instead of id match with patiet do demographic match - name,dob,gender

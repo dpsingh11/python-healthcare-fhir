@@ -1,2 +1,3 @@
-pip install requests
-pip install fhir.resources
+requests
+fhir.resources
+jinja2

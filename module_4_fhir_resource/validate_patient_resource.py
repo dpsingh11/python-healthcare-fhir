@@ -9,8 +9,7 @@ patient_data = {
         "given": ["John"],
         "family": "Doe"
     }],
-    "blodgroup": "b+",
-    "birthDate": "1980-99-99",  # Invalid date format
+    "birthDate": "1980-07-31",  # try with Invalid date format
     "meta": {
         "versionId": "1",
         "profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"]
@@ -25,15 +24,15 @@ except ValueError as e:
 
 # Step 3: Print as Python dict
 print("Patient as Python dict:")
-print(patient.dict())
+print(patient.model_dump())
 
 # Step 4: Print as JSON
 print("\n Patient as JSON:")
-print(patient.json(indent=2))
+print(patient.model_dump_json(indent=2))
 
 # Step 5: Write to file
 os.makedirs("output", exist_ok=True)
 with open("output/fhir_patient.json", "w") as f:
-    f.write(patient.json(indent=2))
+    f.write(patient.model_dump_json(indent=2))
 
 print("\n Patient resource written to output/fhir_patient.json")

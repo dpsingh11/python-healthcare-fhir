@@ -65,6 +65,6 @@ bundle = Bundle(
 # Output
 os.makedirs("output", exist_ok=True)
 with open("output/linked_bundle.json", "w") as f:
-    f.write(bundle.json(indent=2))
+    f.write(bundle.model_dump_json(indent=2))
 
-print("✅ Bundle written to output/linked_bundle.json")
+print(" Bundle written to output/linked_bundle.json")

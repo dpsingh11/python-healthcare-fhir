@@ -11,17 +11,17 @@ print(type(res))
 if res.status_code == 200:
     bundle = res.json()
     if "entry" in bundle:
-        print(f"\n🔎 Total Matches (accurate): {bundle.get('total')}")
-        print(f"🔢 Showing {len(bundle['entry'])} patients:\n")
+        print(f"\n Total Matches (accurate): {bundle.get('total')}")
+        print(f" Showing {len(bundle['entry'])} patients:\n")
 
         for i, entry in enumerate(bundle["entry"], start=1):
             try:
                 # Get only the resource (Patient) from Bundle.entry
                 patient_data = entry["resource"]
-                # ✅ Use model_validate (Pydantic v2+)
+                #  Use model_validate (Pydantic v2+)
                 patient = Patient.model_validate(patient_data)
 
-                print(f"👤 Patient {i}:")
+                print(f" Patient {i}:")
                 if 'name' in patient:
                     name = patient.name[0]
                     print(f"  • Name   : {' '.join(name.given)} {name.family}")
@@ -31,14 +31,14 @@ if res.status_code == 200:
                 print(f"  • id    : {patient.id}")
 
             except ValidationError as e:
-                print(f"❌ Failed to validate patient {i}:")
+                print(f" Failed to validate patient {i}:")
                 print(e)
             except Exception as e:
                 print(str(e))
     else:
-        print("⚠️ No patient entries found in bundle.")
+        print(" No patient entries found in bundle.")
 else:
-    print(f"❌ Failed to fetch data. Status code: {response.status_code}")
+    print(f" Failed to fetch data. Status code: {response.status_code}")
 
 # print(type(data))
 # # print(data)
