@@ -125,7 +125,7 @@ def main(csv_file):
     if valid_resources:
         bundle = build_transaction_bundle(valid_resources)
 
-        with open('output/valid_bundle.json', 'w') as out:
+        with open('../output/valid_bundle.json', 'w') as out:
             json.dump(bundle, out, indent=2)
         print("Written valid_bundle.json")
 
@@ -135,10 +135,10 @@ def main(csv_file):
         print("No valid resources found to send.")
 
     if error_log:
-        with open('output/error_log.json', 'w') as out:
+        with open('../output/error_log.json', 'w') as out:
             json.dump(error_log, out, indent=2)
         print("Written error_log.json")
 
 
 if __name__ == "__main__":
-    main('input/raw_data.csv')
+    main('../input/raw_data.csv')
