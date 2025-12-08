@@ -5,6 +5,7 @@ import json
 def read_ndjson(file_path):
     with open(file_path) as f:
         for line in f:
+            print(type(line))
             resource = json.loads(line)
             if resource['resourceType'] == 'Patient':
                 name = resource.get('name', [{}])[0]

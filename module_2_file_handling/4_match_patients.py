@@ -1,7 +1,6 @@
 import csv
 import json
 
-
 def load_csv_ids(file_path):
     # set is unordered collection of unique items
     ids = set()
@@ -10,7 +9,6 @@ def load_csv_ids(file_path):
         for row in reader:
             ids.add(row['id'])
     return ids
-
 
 def find_matching_patients(json_path, patient_ids):
     with open(json_path) as f:
@@ -24,7 +22,6 @@ def find_matching_patients(json_path, patient_ids):
             given = name.get('given', [''])[0]
             family = name.get('family', '')
             print(f"Matched: {given} {family} (ID: {resource.get('id')})")
-
 
 if __name__ == "__main__":
     patient_ids = load_csv_ids('input/patients.csv')

@@ -4,7 +4,7 @@ import csv
 import os
 # help(csv.DictReader)
 
-
+#UDF
 def read_patient_csv(file_path):
     with open(file_path, mode='r') as f:
         reader = csv.DictReader(f)
@@ -42,8 +42,8 @@ if __name__ == "__main__":
                       'gender': 'male', 'birthDate': '1998-04-24'}])
 
 """
-1. csv.DictReader is a helper class in Python’s built-in csv module that reads a CSV file into a 
-sequence of dictionaries, where keys are taken from the header row.
+1. csv.DictReader is a helper class in Python’s built-in csv module that reads a CSV file into 
+a sequence of dictionaries, where keys are taken from the header row.
 
 {"id":1,"name":"Bruce Wayne"}......
 

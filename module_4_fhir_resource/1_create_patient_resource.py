@@ -24,7 +24,7 @@ patient.id = "12345"
 
 patient.name = [name]  # FHIR allows multiple names
 patient.gender = "male"
-patient.birthDate = "1980-01-32"
+patient.birthDate = "1980-01-28"
 
 print(type(patient))
 print(patient)

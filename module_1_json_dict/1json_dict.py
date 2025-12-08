@@ -1,10 +1,8 @@
 import json
-
 # JSON string (as you'd get from API)
 # data type === type of data + supported operations  not just data type 
 # IT evoluction is nothing but "Abstraction" - Design Thinking, Architecture First approach 
 json_string = '{"name": "John Doe", "age": 35, "gender": "male"}'
-
 
 # Convert JSON string → Python dict (deserialize)
 person_dict = json.loads(json_string)
@@ -13,11 +11,8 @@ print("Python dict:", person_dict)
 
 #now we can acees dict related methods
 # person_dict.get()
-
 # Access fields
 print("Name:", person_dict["name"])
-
-
 
 # Convert Python dict → JSON string (serialization)
 new_json = json.dumps(person_dict)

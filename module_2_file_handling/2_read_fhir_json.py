@@ -1,6 +1,5 @@
 import json
 
-
 def read_fhir_bundle(file_path):
     with open(file_path) as f:
         data = json.load(f)
@@ -14,7 +13,7 @@ def read_fhir_bundle(file_path):
             given = name.get('given', [''])[0]
             family = name.get('family', '')
             print(f"Patient Name : {given} {family}")
-            print(f"Gender       : {resource.get('gender')}")
+            print(f"Gender       : {resource.get('gender','N/A')}")
             print(f"Birth Date   : {resource.get('birthDate')}")
             print("-" * 30)
 
