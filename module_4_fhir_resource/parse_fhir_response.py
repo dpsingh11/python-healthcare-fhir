@@ -30,15 +30,14 @@ if res.status_code == 200:
 
                 print(f"  • id    : {patient.id}")
 
-            except ValidationError as e:
-                print(f" Failed to validate patient {i}:")
-                print(e)
             except Exception as e:
+                print(f" Failed to validate patient {e}:")
                 print(str(e))
+
     else:
         print(" No patient entries found in bundle.")
 else:
-    print(f" Failed to fetch data. Status code: {response.status_code}")
+    print(f" Failed to fetch data. Status code: {res.status_code}")
 
 # print(type(data))
 # # print(data)
