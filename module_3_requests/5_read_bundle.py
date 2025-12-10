@@ -19,6 +19,7 @@ def fetch_all_patients():
         entries = bundle.get("entry", [])
         print(len(entries))
         # extend --- to append a list to a list we use extend 
+        # append 
         all_patients.extend(entries)
 
         # Find 'next' link if available

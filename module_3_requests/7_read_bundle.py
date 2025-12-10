@@ -44,7 +44,7 @@ def fetch_filtered_patients(gender=None, last_updated_after=None):
     return all_patients
 
 
-patients = fetch_filtered_patients(gender="male", last_updated_after="2025-07-28")
+patients = fetch_filtered_patients(gender="male", last_updated_after="2025-12-08")
 
 
 with open('output/filtered_bundle.json', 'w') as f:

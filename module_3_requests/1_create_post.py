@@ -62,7 +62,7 @@ patient_resource = {
     "birthDate": "1999-07-29"
 }
 
-# you can see currently this is deserialized python dict object which cant travel over the api request
+# you can see currently this is deserialized python dict object which can not travel over the api request
 print(f"before serialization, {type(patient_resource)}")
 
 # what we gona do is making it serialized so that it can go over the internet to other system
@@ -78,7 +78,7 @@ headers = {"Content-Type": "application/fhir+json"}
 
 '''
 these configuration details are repeating accross the projects 
-vilating on the Principal 
+vilating on the software engineering Principals
 we absolutely should move repeated values like fhir_base_url and headers 
 to a common config or utility module to follow good coding practices like DRY (Don't Repeat Yourself).
 '''

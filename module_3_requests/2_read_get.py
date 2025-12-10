@@ -3,7 +3,7 @@ import requests
 fhir_base_url = 'https://server.fire.ly/Patient'
 headers = {"Content-Type": "application/fhir+json"}
 
-patient_id = "a300358f-5942-4da2-aca0-9fefed48c4e5"  # Replace with your ID
+patient_id = "8660e33a-cfd2-4410-bb84-9eed63443b57"  # Replace with your ID
 response = requests.get(f"{fhir_base_url}/{patient_id}")
 
 print(type(response))

@@ -139,6 +139,6 @@ def main(csv_file):
             json.dump(error_log, out, indent=2)
         print("Written error_log.json")
 
-
+#starter
 if __name__ == "__main__":
     main('input/raw_data.csv')
