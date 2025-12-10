@@ -9,7 +9,7 @@ patient_data = {
         "given": ["John"],
         "family": "Doe"
     }],
-    "birthDate": "1980-07-31",  # try with Invalid date format
+    "birthDate": "31-09-1989",  # try with Invalid date format
     "meta": {
         "versionId": "1",
         "profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"]
@@ -20,19 +20,21 @@ patient_data = {
 try:
     patient = Patient(**patient_data)
 except ValueError as e:
+    patient = None
     print(str(e))
 
-# Step 3: Print as Python dict
-print("Patient as Python dict:")
-print(patient.model_dump())
+if patient:
+    # Step 3: Print as Python dict
+    print("Patient as Python dict:")
+    print(patient.model_dump())
 
-# Step 4: Print as JSON
-print("\n Patient as JSON:")
-print(patient.model_dump_json(indent=2))
+    # Step 4: Print as JSON
+    print("\n Patient as JSON:")
+    print(patient.model_dump_json(indent=2))
 
-# Step 5: Write to file
-os.makedirs("output", exist_ok=True)
-with open("output/fhir_patient.json", "w") as f:
-    f.write(patient.model_dump_json(indent=2))
+    # Step 5: Write to file
+    os.makedirs("output", exist_ok=True)
+    with open("output/fhir_patient.json", "w") as f:
+        f.write(patient.model_dump_json(indent=2))
 
-print("\n Patient resource written to output/fhir_patient.json")
+    print("\n Patient resource written to output/fhir_patient.json")
