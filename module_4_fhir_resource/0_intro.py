@@ -55,5 +55,3 @@ print(type(data))
 for obs_data in data:
     obs = Observation(**obs_data)
     print(obs.id, obs.status, obs.code.text)
-
-    
