@@ -33,6 +33,8 @@ patient_json = {
 patient = Patient(**patient_json)  # Auto-validates on init
 print(patient.name[0].given)
 
+print(patient.model_dump_json(indent=2))
+
 
 # reading from a json file 
 

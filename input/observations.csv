@@ -1,0 +1,3 @@
+id,status,code_text,value,unit,subject
+obs1,final,Heart rate,72,bpm,Patient/123
+obs2,preliminary,Blood pressure,120,mmHg,Patient/456

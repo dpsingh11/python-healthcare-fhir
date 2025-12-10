@@ -29,11 +29,12 @@ ENV/
 *.env
 .env.*
 
+
 # FHIR data files
 output/
-*.json
-*.csv
-*.ndjson
+output/*.json
+output/*.csv
+output/*.ndjson
 
 # Test and temp files
 temp/

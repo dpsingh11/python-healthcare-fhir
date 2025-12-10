@@ -1,0 +1,18 @@
+[
+    {
+        "resourceType": "Observation",
+        "id": "obs1",
+        "status": "final",
+        "code": {
+            "text": "Heart rate"
+        }
+    },
+    {
+        "resourceType": "Observation",
+        "id": "obs2",
+        "status": "preliminary",
+        "code": {
+            "text": "Blood pressure"
+        }
+    }
+]
