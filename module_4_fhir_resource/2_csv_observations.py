@@ -3,13 +3,14 @@ import os
 from fhir.resources.observation import Observation
 from fhir.resources.codeableconcept import CodeableConcept
 from fhir.resources.quantity import Quantity
-from fhir.resources.fhirreference import FHIRReference
+#from fhir.resources.fhirreference import FHIRReference
+from fhir.resources.reference import Reference
 
 # Create list to store observations
 observations = []
 
 # Read CSV file
-input_file = "input/observation.csv"
+input_file = "input/observations.csv"
 output_file = "output/observations.ndjson"
 os.makedirs("output", exist_ok=True)
 
@@ -17,7 +18,6 @@ with open(input_file) as f:
     reader = csv.DictReader(f)
     for row in reader:
         obs = Observation(
-            resourceType="Observation",
             id=row["id"],
             status=row["status"],
             code=CodeableConcept(text=row["code_text"]),
@@ -25,7 +25,7 @@ with open(input_file) as f:
                 value=float(row["value"]),
                 unit=row["unit"]
             ),
-            subject=FHIRReference(reference=row["subject"])
+            subject=Reference(reference=row["subject"])
         )
         observations.append(obs)
 
