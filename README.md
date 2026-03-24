@@ -80,8 +80,13 @@ PYTHON-HEALTHCARE/
 https://pypi.org/project/fhir.resources/
 
 ## 🔧 Setup
+1. create virtual env 
+    python -m venv venv
 
-```bash
-pip install -r requirements.txt
+2. activate the virtual env 
+     .\venv\Scripts\activate
+
+3. install the dependencies from the requirements.txt file 
+    pip install -r requirements.txt
 
 ---

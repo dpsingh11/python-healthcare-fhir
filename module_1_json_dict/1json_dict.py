@@ -3,6 +3,8 @@ import json
 # data type === type of data + supported operations  not just data type 
 # IT evoluction is nothing but "Abstraction" - Design Thinking, Architecture First approach 
 json_string = '{"name": "John Doe", "age": 35, "gender": "male"}'
+print("type before conversion ", type(json_string))
+
 
 # Convert JSON string → Python dict (deserialize)
 person_dict = json.loads(json_string)
